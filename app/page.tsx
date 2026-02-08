@@ -135,39 +135,31 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -right-8 -top-8 h-56 w-56 rounded-full bg-(--brand-green)/20 blur-2xl" />
-            <div className="absolute -left-10 -bottom-10 h-56 w-56 rounded-full bg-(--brand-blue2)/20 blur-2xl" />
+         <div className="relative overflow-hidden rounded-3xl bg-white/60 p-6 ring-1 ring-slate-200 shadow-xl shadow-blue-100">
+  <div className="flex items-center justify-center rounded-3xl bg-white/70 p-6 ring-1 ring-slate-200">
+    <Image
+      src="/instaclean.png"
+      alt="Instaclean logo"
+      width={520}
+      height={520}
+      className="h-auto w-[320px] sm:w-95 md:w-105 drop-shadow-sm"
+      priority
+    />
+  </div>
 
-            <div className="relative overflow-hidden rounded-3xl bg-white/70 p-3 ring-1 ring-slate-200 shadow-xl shadow-blue-100">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative h-44 overflow-hidden rounded-2xl">
-                <Image
-  src="/Instaclean.PNG"
-  alt="Instaclean logo"
-  width={500}
-  height={500}
-  className="object-contain"
-  priority
-/>
-
-                </div>
-              </div>
-
-              <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-2xl bg-white/80 p-4 ring-1 ring-slate-200">
-                <p className="text-sm font-semibold text-slate-700">
-                  Need it cleaned fast? We can often handle same-day requests.
-                </p>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center rounded-full bg-(--brand-gold) px-4 py-2 text-sm font-extrabold text-slate-900 hover:brightness-95"
-                >
-                  Book Today
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white/80 p-4 ring-1 ring-slate-200">
+    <p className="text-sm font-semibold text-slate-700">
+      Need it cleaned fast? We can often handle same-day requests.
+    </p>
+    <a
+      href="#contact"
+      className="inline-flex items-center rounded-full bg-(--brand-gold) px-5 py-2.5 text-sm font-extrabold text-slate-900 hover:brightness-95 shadow-sm"
+    >
+      Book Today
+    </a>
+  </div>
+</div>
+</div>
       </section>
 
       {/* Services */}
