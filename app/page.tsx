@@ -295,15 +295,7 @@ export default function Page() {
 
     {/* Clean, non-repetitive info cards */}
     <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-      <div className="rounded-2xl bg-white/90 border border-slate-200 p-5">
-        <p className="text-xs font-semibold text-slate-600">Phone</p>
-        <p className="mt-1 text-2xl font-black tracking-tight text-slate-900">{PHONE_DISPLAY}</p>
-        <p className="mt-2 text-sm text-slate-700">
-          Call or text for quickest scheduling. Photos help for accurate quotes.
-        </p>
-
-      
-      </div>
+   
 
       <div className="rounded-2xl bg-white/90 border border-slate-200 p-5">
         <p className="text-xs font-semibold text-slate-600">Email</p>
