@@ -299,7 +299,7 @@ export default function Page() {
           </div>
 
           <p className="mt-6 text-xs text-slate-500">
-            “Colossians 3:23” can be included in the footer if you want it visible on the site.
+            “Colossians 3:23” Whatever you do, work heartily, as for the Lord and not for men.
           </p>
         </div>
       </section>
