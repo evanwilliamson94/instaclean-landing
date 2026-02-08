@@ -142,31 +142,15 @@ export default function Page() {
             <div className="relative overflow-hidden rounded-3xl bg-white/70 p-3 ring-1 ring-slate-200 shadow-xl shadow-blue-100">
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative h-44 overflow-hidden rounded-2xl">
-                  <Image
-                    src="/brand/flyer-1.jpg"
-                    alt="Instaclean flyer"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 300px"
-                  />
-                </div>
-                <div className="relative h-44 overflow-hidden rounded-2xl">
-                  <Image
-                    src="/brand/flyer-4.jpg"
-                    alt="Instaclean flyer"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 300px"
-                  />
-                </div>
-                <div className="relative col-span-2 h-52 overflow-hidden rounded-2xl">
-                  <Image
-                    src="/brand/flyer-3.jpg"
-                    alt="Instaclean flyer"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 600px"
-                  />
+                <Image
+  src="/Instaclean.PNG"
+  alt="Instaclean logo"
+  width={500}
+  height={500}
+  className="object-contain"
+  priority
+/>
+
                 </div>
               </div>
 
