@@ -302,20 +302,7 @@ export default function Page() {
           Call or text for quickest scheduling. Photos help for accurate quotes.
         </p>
 
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center justify-center rounded-full bg-(--brand-blue) px-5 py-2.5 text-sm font-extrabold text-white hover:bg-(--brand-blue2) shadow-sm w-full sm:w-auto"
-          >
-            Tap to Call
-          </a>
-          <a
-            href={`sms:${PHONE_TEL}`}
-            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-slate-900 border border-slate-200 hover:bg-slate-50 shadow-sm w-full sm:w-auto"
-          >
-            Tap to Text
-          </a>
-        </div>
+      
       </div>
 
       <div className="rounded-2xl bg-white/90 border border-slate-200 p-5">
