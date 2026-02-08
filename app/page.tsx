@@ -271,67 +271,94 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="mx-auto max-w-6xl px-4 pb-16">
-        <div className="rounded-3xl bg-white/80 border border-slate-200 p-6 md:p-10">
-          <h2 className="text-2xl font-black tracking-tight text-slate-900">Contact</h2>
-          <p className="mt-1 text-slate-700">
-            Fastest way: call or text. You can also email details/photos.
-          </p>
+     {/* Contact */}
+<section id="contact" className="mx-auto max-w-6xl px-4 pb-16">
+  <div className="rounded-3xl bg-white/80 border border-slate-200 p-6 md:p-10">
+    <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h2 className="text-2xl font-black tracking-tight text-slate-900">Contact</h2>
+        <p className="mt-1 text-slate-700">
+          Fastest way: call or text. You can also email details/photos.
+        </p>
+      </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <a
-              className="rounded-2xl bg-white p-5 border border-slate-200 hover:shadow-md transition"
-              href={`tel:${PHONE_TEL}`}
-            >
-              <p className="text-xs font-semibold text-slate-600">Call</p>
-              <p className="mt-1 text-lg font-extrabold text-slate-900">{PHONE_DISPLAY}</p>
-              <p className="mt-2 text-sm text-slate-700">Tap to call instantly.</p>
-            </a>
+      {/* Single number, two actions */}
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <Button href={`tel:${PHONE_TEL}`} className="w-full sm:w-auto">
+          Call {PHONE_DISPLAY}
+        </Button>
+        <Button href={`sms:${PHONE_TEL}`} variant="secondary" className="w-full sm:w-auto">
+          Text {PHONE_DISPLAY}
+        </Button>
+      </div>
+    </div>
 
-            <a
-              className="rounded-2xl bg-white p-5 border border-slate-200 hover:shadow-md transition"
-              href={`sms:${PHONE_TEL}`}
-            >
-              <p className="text-xs font-semibold text-slate-600">Text</p>
-              <p className="mt-1 text-lg font-extrabold text-slate-900">{PHONE_DISPLAY}</p>
-              <p className="mt-2 text-sm text-slate-700">Tap to message. Send photos if needed.</p>
-            </a>
+    {/* Clean, non-repetitive info cards */}
+    <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="rounded-2xl bg-white/90 border border-slate-200 p-5">
+        <p className="text-xs font-semibold text-slate-600">Phone</p>
+        <p className="mt-1 text-2xl font-black tracking-tight text-slate-900">{PHONE_DISPLAY}</p>
+        <p className="mt-2 text-sm text-slate-700">
+          Call or text for quickest scheduling. Photos help for accurate quotes.
+        </p>
 
-            <a
-              className="rounded-2xl bg-white p-5 border border-slate-200 hover:shadow-md transition"
-              href={`mailto:${EMAIL}`}
-            >
-              <p className="text-xs font-semibold text-slate-600">Email</p>
-              <p className="mt-1 text-lg font-extrabold text-slate-900">{EMAIL}</p>
-              <p className="mt-2 text-sm text-slate-700">Tap to email details.</p>
-            </a>
-          </div>
-
-          {/* Optional ultra-simple “form” without backend: mailto */}
-          <div className="mt-8 rounded-2xl bg-linear-to-r from-white to-white/60 p-5 border border-slate-200">
-            <p className="text-sm font-extrabold text-slate-900">Quick message template</p>
-            <p className="mt-1 text-sm text-slate-700">
-              Tap this and it will open an email with a pre-filled subject/body:
-            </p>
-            <div className="mt-4">
-              <Button
-                href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                  "Cleaning Quote Request"
-                )}&body=${encodeURIComponent(
-                  "Hi Instaclean,\n\nI’d like a quote for:\n- Type of cleaning (move-out/deep/garage/etc):\n- Address/area:\n- Bedrooms/Bathrooms:\n- Preferred date/time:\n- Notes:\n\nThank you!"
-                )}`}
-              >
-                Email for a Quote
-              </Button>
-            </div>
-          </div>
-
-          <p className="mt-6 text-xs text-slate-500">
-            “Colossians 3:23” Whatever you do, work heartily, as for the Lord and not for men.
-          </p>
+        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="inline-flex items-center justify-center rounded-full bg-(--brand-blue) px-5 py-2.5 text-sm font-extrabold text-white hover:bg-(--brand-blue2) shadow-sm w-full sm:w-auto"
+          >
+            Tap to Call
+          </a>
+          <a
+            href={`sms:${PHONE_TEL}`}
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-slate-900 border border-slate-200 hover:bg-slate-50 shadow-sm w-full sm:w-auto"
+          >
+            Tap to Text
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div className="rounded-2xl bg-white/90 border border-slate-200 p-5">
+        <p className="text-xs font-semibold text-slate-600">Email</p>
+        <a
+          href={`mailto:${EMAIL}`}
+          className="mt-1 block text-lg font-extrabold text-slate-900 underline decoration-slate-300"
+        >
+          {EMAIL}
+        </a>
+        <p className="mt-2 text-sm text-slate-700">
+          Prefer email? Send the address, service type, and any photos — we’ll reply fast.
+        </p>
+
+        {/* Optional ultra-simple “form” without backend: mailto */}
+        <div className="mt-4 rounded-2xl bg-linear-to-r from-white to-white/60 p-4 border border-slate-200">
+          <p className="text-sm font-extrabold text-slate-900">Quick quote email</p>
+          <p className="mt-1 text-sm text-slate-700">
+            Opens an email with a pre-filled message:
+          </p>
+          <div className="mt-3">
+            <Button
+              href={`mailto:${EMAIL}?subject=${encodeURIComponent(
+                "Cleaning Quote Request"
+              )}&body=${encodeURIComponent(
+                "Hi Instaclean,\n\nI’d like a quote for:\n- Type of cleaning (move-out/deep/garage/etc):\n- Address/area:\n- Bedrooms/Bathrooms:\n- Preferred date/time:\n- Notes:\n\nThank you!"
+              )}`}
+              variant="secondary"
+              className="w-full sm:w-auto"
+            >
+              Email for a Quote
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p className="mt-6 text-xs text-slate-500">
+      “Colossians 3:23” Whatever you do, work heartily, as for the Lord and not for men.
+    </p>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="border-t border-white/40 bg-white/50">
