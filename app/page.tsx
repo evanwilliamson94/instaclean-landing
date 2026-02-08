@@ -138,7 +138,7 @@ export default function Page() {
          <div className="relative overflow-hidden rounded-3xl bg-white/60 p-6 ring-1 ring-slate-200 shadow-xl shadow-blue-100">
   <div className="flex items-center justify-center rounded-3xl bg-white/70 p-6 ring-1 ring-slate-200">
     <Image
-      src="/instaclean.png"
+      src="/Instaclean.PNG"
       alt="Instaclean logo"
       width={520}
       height={520}
