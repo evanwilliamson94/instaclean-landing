@@ -347,25 +347,7 @@ export default function Page() {
         </div>
       </footer>
 
-      {/* Mobile sticky CTA */}
-      <div className="fixed bottom-3 left-0 right-0 z-50 sm:hidden">
-        <div className="mx-auto max-w-md px-4">
-          <div className="grid grid-cols-2 gap-3 rounded-2xl bg-white/90 p-3 border border-slate-200 shadow-lg shadow-slate-200/60 backdrop-blur-md">
-            <a
-              className="rounded-xl bg-(--brand-blue) py-3 text-center text-sm font-extrabold text-white"
-              href={`tel:${PHONE_TEL}`}
-            >
-              Call
-            </a>
-            <a
-              className="rounded-xl bg-white py-3 text-center text-sm font-extrabold text-slate-900 border border-slate-200"
-              href={`sms:${PHONE_TEL}`}
-            >
-              Text
-            </a>
-          </div>
-        </div>
-      </div>
+    
     </div>
   );
 }
