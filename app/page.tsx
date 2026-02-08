@@ -59,7 +59,7 @@ export default function Page() {
           <div className="flex items-center gap-3">
             <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-white ring-1 ring-slate-200">
               <Image
-                src="/brand/flyer-2.jpg"
+                src="/Instaclean.PNG"
                 alt="Instaclean logo"
                 fill
                 className="object-cover"
